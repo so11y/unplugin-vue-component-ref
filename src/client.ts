@@ -9,7 +9,7 @@ const onVnodeBeforeMountRef_: VNodeProps['onVnodeBeforeMount'] = (
 			{},
 			{
 				get(_, key: string) {
-					if (component.exposed && component.exposed[key])
+					if (component.exposed && key in  component.exposed)
 						return component.exposed[key];
 					//@ts-ignore
 					return component.proxy[key];
