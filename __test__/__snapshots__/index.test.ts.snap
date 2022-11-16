@@ -1,0 +1,20 @@
+// Vitest Snapshot v1
+
+exports[`defineComponent ref 1`] = `
+"<template>
+    <div ref='xx' :onVnodeBeforeMount=\\"onVnodeBeforeMountRef_\\" >5</div>
+  </template>
+  <script >import {onVnodeBeforeMountRef_} from \\"unplugin-vue-ref\\"
+  import {defineComponent} from \\"vue\\"
+  export default defineComponent({})
+  </script>"
+`;
+
+exports[`setup ref 1`] = `
+"<script>import {onVnodeBeforeMountRef_} from \\"unplugin-vue-ref\\"</script><template>
+     <div ref='xx' :onVnodeBeforeMount=\\"onVnodeBeforeMountRef_\\" >5</div>
+    </template>
+  <script setup>
+  let a= 10;
+  </script>"
+`;
