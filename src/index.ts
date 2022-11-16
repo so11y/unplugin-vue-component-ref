@@ -15,13 +15,15 @@ export const transform = (source: string, filename: string) => {
 			}
 		}
 	};
-	compileTemplate({
-		filename,
-		source: descriptor.source,
-		id: filename,
-		compilerOptions: {
-			nodeTransforms: [onRefNode]
-		}
-	});
-	return magicString.toString();
+	if (descriptor.template) {
+		compileTemplate({
+			filename,
+			source: descriptor.template.content,
+			id: filename,
+			compilerOptions: {
+				nodeTransforms: [onRefNode]
+			}
+		});
+		return magicString.toString();
+	}
 };
