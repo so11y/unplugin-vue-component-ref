@@ -2,16 +2,30 @@
 
 exports[`defineComponent ref 1`] = `
 "<template>
-    <div ref='xx' :onVnodeBeforeMount=\\"onVnodeBeforeMountRef_\\" >5</div>
+    <div ref='aa' :onVnodeBeforeMount=\\"onVnodeBeforeMountRef_\\" >5</div>
   </template>
-  <script >import {onVnodeBeforeMountRef_} from \\"unplugin-vue-ref\\"
+  <script >
+  import {defineComponent} from \\"vue\\"
+  export default defineComponent({})
+  </script>"
+`;
+
+exports[`multiple ref 1`] = `
+"<template>
+    <div ref='div1' :onVnodeBeforeMount=\\"onVnodeBeforeMountRef_\\"  >
+      <div ref=\\"div2\\" :onVnodeBeforeMount=\\"onVnodeBeforeMountRef_\\" >
+          <Home ref=\\"home\\" :onVnodeBeforeMount=\\"onVnodeBeforeMountRef_\\" class=\\"test\\"></Home>
+      </div>
+    </div>
+  </template>
+  <script >
   import {defineComponent} from \\"vue\\"
   export default defineComponent({})
   </script>"
 `;
 
 exports[`setup ref 1`] = `
-"<script>import {onVnodeBeforeMountRef_} from \\"unplugin-vue-ref\\"</script><template>
+"<template>
      <div ref='xx' :onVnodeBeforeMount=\\"onVnodeBeforeMountRef_\\" >5</div>
     </template>
   <script setup>

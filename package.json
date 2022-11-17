@@ -1,6 +1,6 @@
 {
 	"name": "unplugin-vue-component-ref",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "用于获取setup组件ref全部导出",
 	"main": "./dist/index.js",
 	"keywords": [
@@ -21,6 +21,10 @@
 	"files": [
 		"dist"
 	],
+	 "repository": {
+    "type": "git",
+    "url": "git+https://github.com/so11y/unplugin-vue-component-ref"
+  },
 	"dependencies": {
 		"@rollup/pluginutils": "^5.0.2",
 		"@vue/compiler-core": "^3.2.45",

@@ -19,16 +19,11 @@ createApp(App).use(unpluginVueRef)
 
 ```
 
+### vite
 
 ``` ts
-//vite
+import { vitePlugin } from "unplugin-vue-component-ref";
 
-
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import { vitePlugin } from "unplugin-vue-ref";
-
-//vitePlugin
 interface Options {
 	include?: FilterPattern;
 	exclude?: FilterPattern;
@@ -36,10 +31,29 @@ interface Options {
 
 export default defineConfig({
   plugins: [
-    vue(),
-    vitePlugin() // Options
+    vitePlugin({ /* options */ }) //
   ],
 });
 
+```
+
+
+### vue.config.js
+
+``` js
+const { webpackPlugin } = require("unplugin-vue-component-ref") ;
+
+interface Options {
+	include?: FilterPattern;
+	exclude?: FilterPattern;
+}
+
+module.exports = {
+  configureWebpack: {
+    plugins: [
+      webpackPlugin({ /* options */ }),
+    ],
+  },
+};
 
 ```
