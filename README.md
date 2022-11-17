@@ -1,5 +1,5 @@
 <div align="center">
-  <h2>unplugin-vue-ref</h2>
+  <h2>unplugin-vue-component-ref</h2>
   <p>用于获取setup组件ref全部导出</p>
 </div>
 
@@ -13,7 +13,7 @@
 
 import {createApp} from "vue"
 import App from "./app"
-import {unpluginVueRef} from "unplugin-vue-ref"
+import {unpluginVueRef} from "unplugin-vue-component-ref"
 
 createApp(App).use(unpluginVueRef)
 
