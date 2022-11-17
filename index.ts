@@ -22,6 +22,7 @@ export const unplugin = createUnplugin((userOptions: Options) => {
 	const filter = createFilter(options.include, options.exclude);
 	return {
 		name: 'unplugin-vue-component-ref',
+		enforce:"pre",
 		transformInclude(id) {
 			return filter(id);
 		},
