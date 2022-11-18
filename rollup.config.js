@@ -11,12 +11,7 @@ const banner = `/*!
 const defineBuild = (options) => {
 	return {
 		input: options.input,
-		plugins: [
-			typeScriptPlugin({
-				check: false,
-				tsconfig: path.resolve(__dirname, './tsconfig.json')
-			})
-		],
+		plugins:options.plugins,
 		output: {
 			banner,
 			file: options.file,
@@ -27,13 +22,25 @@ const defineBuild = (options) => {
 
 module.exports = [
 	defineBuild({
-		input: './index.ts',
-		file: './dist/index.js',
-		format: 'cjs'
+		input: './node_/index.ts',
+		file: './node/index.js',
+		format: 'cjs',
+		plugins:[
+			typeScriptPlugin({
+				check: false,
+				tsconfig: path.resolve(__dirname, './tsconfig.json')
+			})
+		]
 	}),
 	defineBuild({
-		input: './src/client.ts',
-		file: './dist/client.js',
-		format: 'cjs'
+		input: './client_/index.ts',
+		file: './client/index.js',
+		format: 'cjs',
+		plugins:[
+			typeScriptPlugin({
+				check: false,
+				tsconfig: path.resolve(__dirname, './tsconfig.client.json')
+			})
+		]
 	})
 ];

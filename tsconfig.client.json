@@ -17,7 +17,7 @@
     "esModuleInterop": true,
     "removeComments": false,
     "jsx": "preserve",
-    "rootDir": "./node_",
+    "rootDir": ".",
 	},
-	"include": ["./node_/index.ts"]
+	"include": ["./client_/index.ts"]
 }

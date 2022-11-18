@@ -13,7 +13,7 @@
 
 import {createApp} from "vue"
 import App from "./app"
-import {unpluginVueRef} from "unplugin-vue-component-ref"
+import unpluginVueRef from "unplugin-vue-component-ref/client"
 
 createApp(App).use(unpluginVueRef)
 
@@ -22,7 +22,7 @@ createApp(App).use(unpluginVueRef)
 ### vite
 
 ``` ts
-import { vitePlugin } from "unplugin-vue-component-ref";
+import { vitePlugin } from "unplugin-vue-component-ref/node";
 
 interface Options {
 	include?: FilterPattern;
@@ -41,7 +41,7 @@ export default defineConfig({
 ### vue.config.js
 
 ``` js
-const { webpackPlugin } = require("unplugin-vue-component-ref") ;
+const { webpackPlugin } = require("unplugin-vue-component-ref/node") ;
 
 interface Options {
 	include?: FilterPattern;

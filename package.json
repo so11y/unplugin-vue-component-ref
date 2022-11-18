@@ -2,16 +2,13 @@
 	"name": "unplugin-vue-component-ref",
 	"version": "1.0.6",
 	"description": "用于获取setup组件ref全部导出",
-	"main": "./dist/index.js",
+	"main": "./node/index.js",
 	"keywords": [
 		"unplugin",
 		"vue",
 		"setup",
 		"ref"
 	],
-	"browser":{
-		"./index":"./dist/client.js"
-	},
 	"author": {
 		"name": "zrrz",
 		"email": "247076126@qq.com"
@@ -20,9 +17,10 @@
 	"scripts": {
 		"build": "rollup --config"
 	},
-	"types": "./dist/index.d.ts",
+	"types": "./node/index.d.ts",
 	"files": [
-		"dist"
+		"client_",
+		"node_"
 	],
 	 "repository": {
     "type": "git",
