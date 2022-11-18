@@ -45,3 +45,36 @@ test('multiple ref', () => {
 	);
 	expect(result).toMatchSnapshot();
 });
+
+
+
+test('multiple ref', () => {
+	const result = transform(
+		`<script  setup lang="ts">
+    import { ref ,onMounted,getCurrentInstance} from "vue";
+    import PPP from "./page/ppp.vue"
+    import QQQ from "./page/qqq.vue"
+    const {proxy} = getCurrentInstance();
+    const ppp = ref("");
+    const qqq = ref("");
+
+    onMounted(()=>{
+      console.log(proxy.onVnodeBeforeMountRef_);
+      console.log("ppp",ppp.value.a);
+      console.log("qqq->a1",ppp.value.a1);
+      console.log("qqq->a3",ppp.value.a3);
+    })
+    </script>
+
+    <template>
+      <div>
+        <h1>🎇playground</h1>
+        <PPP ref="ppp"></PPP>
+        <QQQ ref="qqq"></QQQ>
+      </div>
+    </template>`,
+		'setup'
+	);
+	expect(result).toMatchSnapshot();
+});
+

@@ -29,6 +29,11 @@ module.exports = [
 	defineBuild({
 		input: './index.ts',
 		file: './dist/index.js',
-		format: 'esm'
+		format: 'cjs'
+	}),
+	defineBuild({
+		input: './src/client.ts',
+		file: './dist/client.js',
+		format: 'cjs'
 	})
 ];
