@@ -1,5 +1,5 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import App from './app';
+import unpluginVueRef from '../../client_/index';
 
-createApp(App).mount('#app')
+createApp(App).use(unpluginVueRef);

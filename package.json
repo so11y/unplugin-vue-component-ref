@@ -15,7 +15,8 @@
 	},
 	"license": "ISC",
 	"scripts": {
-		"build": "rollup --config"
+		"build": "rollup --config",
+    "dev":"cd ./playground && npm run dev"
 	},
 	"types": "./node/index.d.ts",
 	"files": [
