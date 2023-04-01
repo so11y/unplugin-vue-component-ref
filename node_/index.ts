@@ -57,7 +57,7 @@ export const unplugin = createUnplugin((userOptions: Options = {}) => {
 			return filter(id);
 		},
 		transform(code, id) {
-			if (filter(id)) transform(code, id);
+			if (filter(id)) return transform(code, id);
 			return null;
 		}
 	};
